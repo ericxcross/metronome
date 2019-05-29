@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 import PlayButton from '../component/PlayButton.js';
 import BpmSlider from '../component/BpmSlider.js';
+import BpmDisplay from '../component/BpmDisplay.js';
 
 class MetronomeContainer extends Component{
 
@@ -15,12 +16,11 @@ class MetronomeContainer extends Component{
   }
 
   handleButtonClick(evt){
-    console.log("click");
     this.state.isPlaying === true ? this.setState({isPlaying: false}) : this.setState({isPlaying: true});
   }
 
   handleSliderMovement(evt){
-    console.log(evt.target.value)
+    this.setState({bpm: evt.target.value})
   }
 
   render(){
@@ -29,6 +29,9 @@ class MetronomeContainer extends Component{
         <BpmSlider
           slider = {this.state.bpm}
           handleSliderMovement = {this.handleSliderMovement}
+        />
+        <BpmDisplay
+          bpm = {this.state.bpm}
         />
         <PlayButton
           isPlaying = {this.state.isPlaying}

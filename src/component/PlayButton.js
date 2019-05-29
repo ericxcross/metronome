@@ -4,7 +4,7 @@ import PlayIcon from './PlayIcon.js'
 const PlayButton = (props) => {
 
   return (
-    <div onClick={props.handleButtonClick}>
+    <div className = "play-button" onClick={props.handleButtonClick}>
       <PlayIcon
         isPlaying={props.isPlaying}
       />
