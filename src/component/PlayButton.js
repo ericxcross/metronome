@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PlayIcon from './PlayIcon.js'
 
 const PlayButton = (props) => {

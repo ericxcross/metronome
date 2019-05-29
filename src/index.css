@@ -13,8 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   width: 100%;
-  background-color: #ffe9ec;
+  background-color: #ffe9e9;
   color: #191919;
+
+  background:linear-gradient(0deg,rgba(255,233,233,0.3),rgba(255,233,233,0.3));
+  background-size:cover;
 }
 
 code {
@@ -22,13 +25,17 @@ code {
     monospace;
 }
 
-.metronome-container{
+#metronome-container{
   max-width: 480px;
   max-height: 560px;
   margin: 60px auto;
   padding-top: 12px;
   background-color: white;
-  box-shadow: 0 0 10px -3px #888888;
+  box-shadow: 0 0 10px -5px #888888;
+
+  animation-name: ;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .slider-box{
@@ -64,6 +71,18 @@ code {
   opacity: 0.8;
 }
 
+.sound-button{
+  margin: 3em 1.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: none;
+  justify-content: space-between;
+}
+
+.soundbutton h3{
+  transition: opacity ease-in-out 0.3s;
+}
+
 h1{
   font-size: 12em;
   padding: 0;
@@ -74,4 +93,16 @@ h2{
   font-size: 2em;
   padding: 0;
   margin: 0;
+}
+
+@keyframes color {
+  0% {
+    box-shadow: 0 0 10px -5px #888888;
+  }
+  50% {
+    box-shadow: 0 0 30px -5px #888888;
+  }
+  100 {
+    box-shadow: 0 0 50px -3px #888888;
+  }
 }
